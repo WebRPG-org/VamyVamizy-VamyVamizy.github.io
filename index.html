@@ -1,77 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Website</title>
-    <link id="lightSheet" rel="stylesheet" href="css/style.css">
-    <link id="darkSheet" rel="stylesheet" media="none" href="css/dark.css">
-    <link rel="stylesheet" href="css/site-theme.css">
-</head>
-
-<body class="site-page home-page">
-    <div class="page-shell">
-        <div id="banner">
-            <h1>Vamy's Webpage</h1>
-            <div class="nav-row">
-                <a href="about.html">About Me</a>
-                <a href="gameguide.html">Resume Details</a>
-                <a href="#" onclick="changeSheet(); setCookie('lightMode', lightMode, 1)">Switch Color Mode</a>
-            </div>
-        </div>
-
-        <div id="content">
-            <div class="post-grid">
-                <article class="post span-5">
-                    <h2>About Me</h2>
-                    <p>Hi, I'm Vincent, I'm a high school programming student who is currently working with and learning various programming languages like JavaScript, Python, and HTML.</p>
-                    <p></p>
-                    <div class="link-grid">
-                        <a class="action-link" href="about.html"><span>View:</span> Experience & Education</a>
-                        <a class="action-link" href="gameguide.html"><span>Open:</span> Skills & Activities</a>
-                    </div>
-                </article>
-
-                <article class="post span-7">
-                    <h2>Contact Information</h2>
-                    <img src="img/Jean.png" alt="Vincent Liu portrait" style="width: 180px; max-width: 48%; border: 0; box-shadow: none; display: block; margin: 8px auto 14px;">
-                    <p>Phone: 347-249-6632</p>
-                    <p>Email: Vamyholic@gmail.com</p>
-                    <div class="link-grid">
-                        <a class="action-link" href="about.html"><span>Read:</span> Work Experience</a>
-                        <a class="action-link" href="gameguide.html"><span>Read:</span> Certifications & Skills</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div>
-
-</body>
-<script src="js/cookie.js"></script>
-<script>
-    var lightMode = getCookie('lightMode') !== 'false';
-    var darkSheet = document.getElementById('darkSheet');
-
-    function applyTheme() {
-        if (lightMode === false) {
-            console.log('Turning dark mode on...');
-            darkSheet.media = '';
-            document.body.classList.add('dark-mode');
-        } else {
-            console.log('Turning light mode on...');
-            darkSheet.media = 'none';
-            document.body.classList.remove('dark-mode');
-        }
-    }
-
-    applyTheme();
-
-    function changeSheet() {
-        lightMode = !lightMode;
-        applyTheme();
-    }
-
-</script>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/game.css">
+        <title>Go To School 5</title>
+    </head>
+    <body style="background-color: black">
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>
